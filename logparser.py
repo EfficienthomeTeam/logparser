@@ -49,11 +49,11 @@ def log_to_dataframe(fp):
                 warn("Possibly missing value in %s line of file `%s` " % (i+1, fp))
                 logging.warning("Possibly missing value in %s line of file `%s` " % (i+1, fp))
             list_temperatures.append(temperatures)
-    df = pd.DataFrame(data=list_temperatures, columns=['T_1', 'T_2', 'T_3', 'T_4'])
+    df = pd.DataFrame(data=list_temperatures, columns=['T1', 'T2', 'T3', 'T4'])
     df['DATE'] = dates
     df['MODE'] = modes
     
-    return df[['DATE', 'T_1', 'T_2', 'T_3', 'T_4', 'MODE']]
+    return df[['DATE', 'T1', 'T2', 'T3', 'T4', 'MODE']]
 
 
 def convert_folder(log_dir):
